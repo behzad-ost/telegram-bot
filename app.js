@@ -45,7 +45,6 @@ bot.on('/hello', msg => {
 });
 
 
-<<<<<<< HEAD
 bot.on('text', msg => {
 	if (msg.text == "choose") {
 		let markup = bot.inlineKeyboard([
@@ -67,53 +66,6 @@ bot.on('text', msg => {
 		return bot.sendMessage(msg.from.id, `Hello, ${ msg.from.first_name }!`);
 	} else {
 		return bot.sendMessage(msg.from.id, `${ m }`);
-=======
-api.on('message', function(message) {
-	// Received text message
-
-	if (message.text == "hi") {
-		api.sendMessage({
-				chat_id:message.chat.id,
-				text: 'Helloooooo ,'+message.chat.first_name+ '!'
- 			})
-			.then(function(data) {
-				console.log(util.inspect(data, false, null));
-			})
-			.catch(function(err) {
-				console.log(err);
-			});
-	} else if (message.text == "ax") {
-		api.sendPhoto({
-				chat_id: message.chat.id,
-				caption: 'This is my test image',
-
-				// you can also send file_id here as string (as described in telegram bot api documentation)
-				photo: '1.jpg'
-			})
-			.then(function(data) {
-				console.log(data);
-			});
-	}
-	else{
-		var mesg;
-		if(i)
-			mesg = 'هممممم'
-		else
-			mesg = 'هوممممم'
-
-		i = !i;
-
-		api.sendMessage({
-				chat_id: message.chat.id,
-				text: mesg
-			})
-			.then(function(data) {
-				console.log(util.inspect(data, false, null));
-			})
-			.catch(function(err) {
-				console.log(err);
-			});
->>>>>>> 1044ebb6563dffffcc63449f96bd833ff94851ce
 	}
 });
 
