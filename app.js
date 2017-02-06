@@ -63,7 +63,7 @@ bot.on('text', msg => {
 		});
 
 	} else if (msg.text == "hi") {
-		return bot.sendMessage(msg.from.id, `Hello, ${ msg.from.first_name }!`);
+		return bot.sendMessage(msg.from.id, `Hellooooooo, ${ msg.from.first_name }!`);
 	} else {
 		return bot.sendMessage(msg.from.id, `${ m }`);
 	}
