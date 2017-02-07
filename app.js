@@ -45,6 +45,8 @@ bot.on('/hello', msg => {
 });
 
 
+
+
 bot.on('text', msg => {
 	if (msg.text == "choose") {
 		let markup = bot.inlineKeyboard([
@@ -64,6 +66,8 @@ bot.on('text', msg => {
 
 	} else if (msg.text == "hi") {
 		return bot.sendMessage(msg.from.id, `Hellooooooo, ${ msg.from.first_name }!`);
+	} else if ((msg.text == "😀" | msg.text == "😄") && msg.from.last_name=="Akhavani") {
+		return bot.sendMessage(msg.from.id, `کیر`);
 	} else {
 		return bot.sendMessage(msg.from.id, `${ m }`);
 	}
